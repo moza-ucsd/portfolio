@@ -153,7 +153,6 @@ body {
     }
   }
   
-  /* Skills list displayed as badges/pills */
   section:has(h2:contains("Skills")) ul,
   section h2 + ul {
     display: flex;
