@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Project 1 Checkpoint: Processed Food and Price per Calorie",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "A first pass at testing whether more processed foods are cheaper for the energy they provide. A scatterplot of price per calorie (log-transformed) against food processing score, from unprocessed (0) to fully processed (1), with a median trend line. The relationship turned out to be only slightly negative, and retailers stock far more highly processed items."
+    },
+    {
+        "title": "Project 1 Final: Is Processed Food Really Cheaper?",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "The final version of the price-per-calorie scatterplot, with points colored by four processing categories and a median line across processing scores. The log transform keeps a few expensive items from squashing the rest of the data. The trend suggests less processed food can cost about the same per calorie, challenging the idea that processed food is the cheaper option."
+    },
+    {
+        "title": "Project 2 Checkpoint: Deceptive Visualizations",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Two datasets, NYPD civilian complaints and Guttmacher abortion data by U.S. state, each shown in two charts arguing opposite propositions. Each chart uses deliberate deceptive techniques, such as cherry-picked time windows, changed units, truncated color scales and one-sided framing, to show how the same data can be bent to support either side."
+    },
+    {
+        "title": "Debitis dignissimos alias exercitationem.",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Nam cum quidem facilis itaque nostrum corporis autem. Natus nostrum maiores laudantium officiis culpa excepturi, vero obcaecati placeat quos ad nobis deleniti odio velit reiciendis laboriosam ducimus libero quae praesentium."
+    },
+    {
+        "title": "Facilis laboriosam nesciunt reiciendis?",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Facere culpa impedit, recusandae, cum quae repellat aliquam et velit a explicabo alias eius suscipit vitae veniam consequatur iusto quia pariatur nisi. Sit esse minima dignissimos assumenda repellat rerum dicta?"
+    },
+    {
+        "title": "Rerum voluptates hic doloremque?",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Possimus sint voluptatem sit commodi consequuntur animi, modi ipsa, eos, eius dolore autem optio porro blanditiis adipisci? Error, consectetur adipisci sed veniam, itaque minima nisi deserunt libero laborum sequi reiciendis."
+    },
+    {
+        "title": "Odit inventore accusamus ducimus.",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Itaque praesentium tempora molestias ipsum nemo tenetur veritatis fuga explicabo numquam laboriosam veniam commodi aperiam, voluptas voluptatibus, optio exercitationem eveniet minus dolor maiores? Ratione dicta veniam suscipit laborum ab. Fuga?"
+    },
+    {
+        "title": "Et vitae unde consectetur.",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Dignissimos aut quae illum quod in totam itaque optio asperiores cupiditate et. Dolore placeat, laudantium expedita ea similique asperiores. Fugit adipisci tempore distinctio nobis aliquid similique corporis impedit placeat enim."
+    },
+    {
+        "title": "Possimus quo non natus!",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Facilis, a deserunt quisquam soluta magnam nihil, eveniet excepturi qui aspernatur, placeat delectus animi temporibus numquam amet eum deleniti vero! Eum corporis itaque reiciendis aspernatur illum? Accusantium modi natus earum."
+    },
+    {
+        "title": "Aliquid itaque autem architecto.",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Reiciendis, sed corrupti doloremque neque ipsum omnis non et delectus pariatur rerum corporis exercitationem incidunt earum inventore explicabo enim officia velit, odio veniam eveniet. Ad earum et quod. Quia, illo!"
+    },
+    {
+        "title": "Culpa at facere quibusdam.",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Alias, tempore? Rem, facilis nisi. Explicabo repudiandae qui eaque vel corporis tempora sit, voluptates officiis consequatur quisquam labore. Quisquam ducimus sint, voluptates asperiores ipsum voluptatum quo placeat nisi repellendus illo?"
+    },
+    {
+        "title": "Alias sit facilis fuga.",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Voluptate exercitationem commodi sapiente? Dignissimos ipsum perspiciatis dolores debitis neque, alias, laudantium accusamus necessitatibus in nisi expedita, consequatur quos! Dolores rem commodi quidem soluta ducimus excepturi quasi fuga veritatis neque."
+    }
+]
