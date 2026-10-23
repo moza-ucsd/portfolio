@@ -144,7 +144,7 @@ export function renderProjects(projects, containerElement, headingLevel='h2') {
 		
 		article.innerHTML = `
 			<${headingLevel}>${project.title}</${headingLevel}>
-			<img src="${project.image}" alt="${project.title}">
+			<img src="${project.image.startsWith('http') ? project.image : BASE_PATH + project.image}" alt="${project.title}">
 			<p>${project.description}</p>
 		`;
 
@@ -152,4 +152,3 @@ export function renderProjects(projects, containerElement, headingLevel='h2') {
 		containerElement.appendChild(article);
 	});
 }
-

@@ -92,11 +92,39 @@ body {
       display: grid;
       grid-template-rows: subgrid;
       grid-row-end: span 3;
+      min-width: 0; /* lets grid columns shrink instead of growing to fit wide images */
   
       h2 {
         margin: 0;
       }
+
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: contain; /* show the whole chart, no cropping */
+      }
     }
+  }
+
+  /* Step 3: GitHub stats on the home page */
+  #profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+
+  #profile-stats dt {
+    grid-row: 1;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: gray;
+  }
+
+  #profile-stats dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 2em;
   }
 
   header {
