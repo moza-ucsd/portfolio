@@ -2,19 +2,19 @@
     {
         "title": "Project 1 Checkpoint: Processed Food and Price per Calorie",
         "year": "2026",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "images/plot_price_calorie.png",
         "description": "A first pass at testing whether more processed foods are cheaper for the energy they provide. A scatterplot of price per calorie (log-transformed) against food processing score, from unprocessed (0) to fully processed (1), with a median trend line. The relationship turned out to be only slightly negative, and retailers stock far more highly processed items."
     },
     {
         "title": "Project 1 Final: Is Processed Food Really Cheaper?",
         "year": "2026",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "images/plot_process_retailers.png",
         "description": "The final version of the price-per-calorie scatterplot, with points colored by four processing categories and a median line across processing scores. The log transform keeps a few expensive items from squashing the rest of the data. The trend suggests less processed food can cost about the same per calorie, challenging the idea that processed food is the cheaper option."
     },
     {
         "title": "Project 2 Checkpoint: Deceptive Visualizations",
         "year": "2026",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "images/mistconduct_penalty.png",
         "description": "Two datasets, NYPD civilian complaints and Guttmacher abortion data by U.S. state, each shown in two charts arguing opposite propositions. Each chart uses deliberate deceptive techniques, such as cherry-picked time windows, changed units, truncated color scales and one-sided framing, to show how the same data can be bent to support either side."
     },
     {
