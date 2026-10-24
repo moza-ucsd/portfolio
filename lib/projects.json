@@ -13,13 +13,13 @@
     },
     {
         "title": "Project 2 Checkpoint: Deceptive Visualizations",
-        "year": "2026",
+        "year": "2019",
         "image": "images/misconduct_penalty.png",
         "description": "Two datasets, NYPD civilian complaints and Guttmacher abortion data by U.S. state, each shown in two charts arguing opposite propositions. Each chart uses deliberate deceptive techniques, such as cherry-picked time windows, changed units, truncated color scales and one-sided framing, to show how the same data can be bent to support either side."
     },
     {
         "title": "Project 2 Checkpoint: Deceptive Visualizations",
-        "year": "2026",
+        "year": "2019",
         "image": "images/nypd_complaints.png",
         "url": "projects/Project2/",
         "description": "Two datasets, NYPD civilian complaints and Guttmacher abortion data by U.S. state, each shown in two charts arguing opposite propositions. Each chart uses deliberate deceptive techniques, such as cherry-picked time windows, changed units, truncated color scales and one-sided framing, to show how the same data can be bent to support either side."
