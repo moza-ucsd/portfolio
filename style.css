@@ -199,3 +199,9 @@ body {
       font-weight: 500;
     }
   }
+  .projects article h2 a {
+    color: inherit;
+  }
+  .projects article h2 a:hover {
+    color: var(--color-accent);
+  }

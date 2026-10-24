@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project 2 Report: Persuasive or Deceptive Visualization?</title>
+        <style>
+            :root {
+                --color-neutral-95: hsl(220 10% 95%);
+                --color-neutral-90: hsl(220 10% 90%);
+                --color-neutral-80: hsl(220 10% 80%);
+                --color-neutral-70: hsl(220 10% 70%);
+                --color-neutral-60: hsl(220 10% 60%);
+                --color-neutral-50: hsl(220 10% 50%);
+                --color-neutral-40: hsl(220 10% 40%);
+                --color-neutral-30: hsl(220 10% 30%);
+                --color-neutral-20: hsl(220 10% 20%);
+                --color-neutral-10: hsl(220 10% 10%);
+            }
+
+            html {
+                font: 100%/1.5 system-ui;
+                counter-reset: figure;
+                background: var(--color-neutral-95);
+                max-width: min(75vw, 80em);
+                margin: 0 auto;
+            }
+
+            /* Headings */
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                line-height: 1.1;
+                font-weight: 600;
+                text-wrap: balance;
+            }
+
+            h1,
+            h2 {
+                border-bottom: 1px solid var(--color-neutral-80);
+                padding-bottom: 0.2em;
+            }
+
+            h1 {
+                margin-block: 1em 0.5rem;
+                font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+                font-weight: 800;
+
+                small {
+                    display: block;
+                    width: fit-content;
+                    padding: 0.2em 0.5em;
+                    margin-inline: auto;
+                    color: white;
+                    background: var(--color-neutral-40);
+                    font-size: 40%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+            }
+
+            h2 {
+                font-size: 180%;
+                color: var(--color-neutral-30);
+            }
+
+            h3 {
+                font-size: 130%;
+            }
+
+            /* Lists */
+
+            ul,
+            ol {
+                padding-inline-start: 2em;
+            }
+
+            li {
+                &::marker {
+                    color: var(--color-neutral-40);
+                }
+
+                + li {
+                    margin-top: 0.2em;
+                }
+            }
+
+            /* Sectioning elements */
+
+            header {
+                padding-block: 1em;
+                text-align: center;
+            }
+
+            .back-link {
+                display: inline-block;
+                margin-bottom: 0.5em;
+                color: var(--color-neutral-40);
+            }
+
+            main {
+                background: white;
+                color: var(--color-neutral-20);
+                border-radius: 1rem;
+                padding: 0.1rem 2rem;
+            }
+
+            footer {
+                padding-block: 1.5em;
+                text-align: center;
+                font-size: 85%;
+                color: var(--color-neutral-40);
+            }
+
+            /* Figures */
+
+            figure {
+                margin: 1em 0;
+                padding: 0.5rem;
+                margin-inline: -0.5em;
+                border: 1px solid var(--color-neutral-80);
+                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+                text-align: center;
+                background: white;
+
+                > img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                > figcaption {
+                    font: 500 75% system-ui;
+                    background: var(--color-neutral-95);
+                    padding: 0.5rem;
+                    margin: -0.5rem;
+                    margin-top: 0.5rem;
+                    counter-increment: figure;
+                    text-align: left;
+
+                    &::before {
+                        content: "Figure " counter(figure) ": ";
+                        font-weight: bold;
+                        color: var(--color-neutral-40);
+                    }
+
+                    a:not(:hover, :focus, :active) {
+                        color: inherit;
+                        text-decoration: underline;
+                        text-decoration-color: color-mix(
+                            in lab,
+                            currentColor,
+                            transparent 70%
+                        );
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a class="back-link" href="../">&larr; Back to Projects</a>
+            <h1>
+                <small>Project 2</small>
+                Persuasive or Deceptive Visualization?
+            </h1>
+
+            <p><strong>Mahir Oza</strong> — <em>moza@ucsd.edu</em></p>
+        </header>
+
+        <main>
+            <h2>
+                Proposition: &ldquo;The NYPD civilian-complaint process
+                increasingly holds officers accountable.&rdquo;
+            </h2>
+
+            <p>
+                Both visualizations below use the same dataset: civilian
+                complaints against New York City police officers, as decided by
+                the Civilian Complaint Review Board (CCRB), compiled by
+                ProPublica. Each one is built from the same underlying records
+                but is designed to push the reader toward the opposite
+                conclusion about whether officers are being held accountable.
+            </p>
+
+            <section>
+                <h3>FOR the Proposition</h3>
+
+                <figure>
+                    <img
+                        src="../../images/nypd_complaints.png"
+                        alt="Line chart titled 'More and More Civilian Complaints Against Officers Are Upheld'. The share of civilian complaints with at least one substantiated allegation rises from 17% in 2007 to 54% in 2019."
+                    />
+                    <figcaption>
+                        The share of civilian complaints in which at least one
+                        allegation was substantiated rose from 17% (2007) to
+                        54% (2019), roughly tripling.
+                    </figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul>
+                    <li>
+                        <strong>Chose the start and end years carefully.</strong>
+                        The line begins in 2007, the low point of the series,
+                        and ends in 2019, so the chart shows the steepest
+                        possible climb and supports the headline claim that
+                        &ldquo;more and more&rdquo; complaints are upheld.
+                    </li>
+                    <li>
+                        <strong>Used the complaint, not the allegation, as the unit.</strong>
+                        A complaint counts as upheld if
+                        <em>any</em> of its allegations is substantiated. This
+                        is a much easier bar to clear than counting each
+                        allegation separately, which inflates the rate and the
+                        size of its increase.
+                    </li>
+                    <li>
+                        <strong>Binned by year received and kept only closed cases.</strong>
+                        Because only closed cases are included, the most recent
+                        years are made up mostly of complaints that were
+                        resolved quickly, which makes 2019 look better than it
+                        might once slower cases are included.
+                    </li>
+                    <li>
+                        <strong>Left out how serious the outcome was.</strong>
+                        The chart never shows whether a substantiated complaint
+                        led to formal charges. Including that dimension would
+                        have pulled the rate down, so it was dropped.
+                    </li>
+                    <li>
+                        <strong>Visual styling reinforces the message.</strong>
+                        A single confident blue line with a soft area fill,
+                        direct labels on the first and last points (17% and
+                        54%), and an annotation (&ldquo;about 3&times; as
+                        likely to be upheld&rdquo;) tell the reader what to
+                        conclude before they study the axes.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>AGAINST the Proposition</h3>
+
+                <figure>
+                    <img
+                        src="../../images/misconduct_penalty.png"
+                        alt="Two-panel chart titled 'Misconduct Brings A Slap on the Wrist, Officers Rarely Face Disciplinary Measures Anymore'. A 100-square waffle chart shows 11 allegations ending in substantiated formal charges, 14 substantiated with a lighter outcome, 29 exonerated and 46 unsubstantiated. A line chart shows the share of substantiated allegations ending in formal charges falling from 89% in 2003 to 4% in 2019."
+                    />
+                    <figcaption>
+                        Of 100 civilian allegations, only 11 end in formal
+                        charges, and the share of substantiated allegations
+                        that result in charges fell from 89% (2003) to 4%
+                        (2019).
+                    </figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul>
+                    <li>
+                        <strong>Switched to a metric that shows a collapse.</strong>
+                        The line chart uses the share of substantiated
+                        allegations that end in formal charges. This mixes a
+                        real decline with a change in how outcomes were coded
+                        after 2014, so the drop looks steeper and more
+                        meaningful than the underlying behavior may be.
+                    </li>
+                    <li>
+                        <strong>Counted allegations instead of complaints.</strong>
+                        At the allegation level, categories such as Force
+                        allegations, which are much less likely to be
+                        substantiated, drag the overall rate down. Counting
+                        complaints, as the first chart does, hides this.
+                    </li>
+                    <li>
+                        <strong>Used loaded language.</strong>
+                        The headline (&ldquo;A Slap on the Wrist&rdquo;,
+                        &ldquo;Rarely Face Disciplinary Measures&rdquo;) and the
+                        framing question tell readers how to feel before they
+                        have read any numbers.
+                    </li>
+                    <li>
+                        <strong>Ordered the waffle chart to favor the point.</strong>
+                        The red &ldquo;formal charges&rdquo; squares are packed
+                        into one small corner, while the grey squares for
+                        exonerated and unsubstantiated allegations take up the
+                        rest of the grid, so the outcome the proposition cares
+                        about looks like a tiny exception.
+                    </li>
+                    <li>
+                        <strong>Red palette and endpoint labels.</strong>
+                        A red palette signals alarm, and bold labels on the
+                        first and last points of the line (89% and 4%) anchor
+                        the reader on the most dramatic comparison.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Final Reflection</h2>
+
+                <p>
+                    For this project I made two pairs of charts, one on NYPD
+                    civilian complaints and one on abortion clinic data from the
+                    Guttmacher Institute, and I chose to present the NYPD set.
+                    The deceptions in it are more subtle than in the abortion
+                    set, where much of the persuasion came from one-sided
+                    framing, such as showing only the states that lost clinics
+                    and using a red-only palette. In the police data, the two
+                    charts do not disagree about the facts. They differ in
+                    their unit of analysis (complaints versus allegations), the
+                    time window they show, and the outcome they measure
+                    (substantiated at all versus ending in formal charges). I
+                    found that more interesting, and more realistic, because
+                    every number on both pages comes from the same data and can
+                    be defended on its own.
+                </p>
+
+                <p>
+                    Building both sides taught me that most of the persuasion
+                    in a chart happens before anything is drawn. Choosing the
+                    start and end year, deciding what counts as a case,
+                    deciding which outcomes to include, and deciding what to
+                    leave out each moved the story more than any color or
+                    annotation did. The visual choices, such as a calm blue
+                    line versus an alarm-red waffle chart, direct labels, loaded
+                    headlines and the ordering of the squares, then reinforce
+                    whatever the data choices already established. Because the
+                    charts are accurate in a narrow sense and misleading in
+                    context, they are hard to catch simply by checking whether
+                    the numbers are &ldquo;right.&rdquo;
+                </p>
+
+                <p>
+                    As a reader, I will now ask a few questions of any
+                    persuasive chart: why does the time window start and end
+                    where it does, what is being counted (people, complaints,
+                    allegations), what is missing from the chart that would
+                    change the conclusion, and does the language of the title do
+                    work that the data has not earned? As a creator, I think
+                    the line between persuasive and deceptive is whether a
+                    reader who saw the full context would feel misled. Both of
+                    my charts would likely fail that test, which is why I would
+                    show them together, and why I would be open about the
+                    choices made if I were presenting either one on its own.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            Data: ProPublica / NYC Civilian Complaint Review Board (CCRB).
+            Visualizations and write-up by Mahir Oza for DSC 209R.
+        </footer>
+    </body>
+</html>

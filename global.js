@@ -142,8 +142,13 @@ export function renderProjects(projects, containerElement, headingLevel='h2') {
 
 		const article = document.createElement('article');
 		
+		const href = project.url
+			? (project.url.startsWith('http') ? project.url : BASE_PATH + project.url)
+			: null;
+		const heading = href ? `<a href="${href}">${project.title}</a>` : project.title;
+
 		article.innerHTML = `
-			<${headingLevel}>${project.title}</${headingLevel}>
+			<${headingLevel}>${heading}</${headingLevel}>
 			<img src="${project.image.startsWith('http') ? project.image : BASE_PATH + project.image}" alt="${project.title}">
 			<p>${project.description}</p>
 		`;
