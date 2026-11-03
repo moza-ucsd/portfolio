@@ -7,7 +7,7 @@
     <title>Meta</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../global.js" type="module"></script>
-    <!-- Step 1.1 will add: <script src="main.js" type="module"></script> -->
+    <script src="main.js" type="module"></script>
 </head>
 <body>
     <h1>Meta</h1>
@@ -17,8 +17,39 @@
         <code>elocuent</code> tool, and the visualizations below are drawn with D3.
     </p>
 
-    <!-- Step 1.3 will add:   <div id="stats"></div> -->
-    <!-- Step 2.1 will add:   <h2>Commits by time of day</h2> and <div id="chart"></div> -->
-    <!-- Step 3.1 will add:   <dl id="commit-tooltip" class="info tooltip" hidden> ... </dl> -->
+    <!-- Step 1: summary stats -->
+    <h2>Summary</h2>
+    <div id="stats"></div>
+
+    <!-- Step 2: scatterplot of commits -->
+    <h2>Commits by time of day</h2>
+    <p>
+        Each dot is one commit. Hover over a dot for details, and drag a rectangle
+        across the chart to select commits. Bigger dots edited more lines, and
+        dots are warm orange around midday, shading through red and purple to deep blue at night.
+    </p>
+    <div id="chart"></div>
+
+    <!-- Step 5: brushing results -->
+    <p id="selection-count" aria-live="polite">No commits selected</p>
+    <dl id="language-breakdown" class="stats"></dl>
+
+    <!-- Step 3: tooltip (hidden until you hover a dot) -->
+    <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dt>Commit</dt>
+        <dd><a href="" id="commit-link" target="_blank"></a></dd>
+
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+
+        <dt>Lines edited</dt>
+        <dd id="commit-lines"></dd>
+    </dl>
 </body>
 </html>

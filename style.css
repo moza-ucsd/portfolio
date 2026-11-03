@@ -298,3 +298,121 @@ body {
     padding: 0.5em;
     margin-block: 1em 1.5em;
   }
+  /* ===== Lab 6: Meta page ===== */
+
+  /* Step 1.3: summary stats (dt label on top, dd value below, one pair per column) */
+  .stats {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 1em;
+    text-align: center;
+    overflow-x: auto;
+    margin-block: 1em;
+
+    dt {
+      font-size: 0.8em;
+      text-transform: uppercase;
+      color: gray;
+    }
+
+    dd {
+      margin: 0;
+      font-size: 1.6em;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  #language-breakdown dd {
+    font-size: 1.1em;
+  }
+
+  /* Step 3.1: label/value list, reusable for tooltips and other lists */
+  dl.info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25em 1em;
+    margin: 0;
+
+    dt {
+      color: gray;
+      font-size: 0.85em;
+    }
+
+    dd {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* Step 3.3: fade in/out instead of popping */
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+
+    &[hidden]:not(:hover, :focus-within) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  /* Step 3.2: look like a floating tooltip */
+  .tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 10;
+    padding: 0.75em 1em;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    backdrop-filter: blur(6px);
+    border-radius: 0.5em;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Step 2: the chart */
+  #chart svg {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Step 2.3: keep gridlines faint */
+  .gridlines line {
+    stroke: currentColor;
+    stroke-opacity: 0.12;
+  }
+
+  .gridlines .domain {
+    display: none;
+  }
+
+  /* Step 3.1: dots grow from their centers on hover */
+  #chart circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+    cursor: pointer;
+  }
+
+  #chart circle:hover {
+    transform: scale(1.5);
+  }
+
+  /* Step 5.4: dots inside the brush */
+  #chart circle.selected {
+    fill: #ff6b6b;
+  }
+
+  /* Step 5.3: marching-ants brush rectangle */
+  @keyframes marching-ants {
+    to {
+      stroke-dashoffset: -8; /* 5 + 3 */
+    }
+  }
+
+  #chart .selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+  }
